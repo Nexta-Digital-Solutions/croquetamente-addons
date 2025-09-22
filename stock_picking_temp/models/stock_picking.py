@@ -5,13 +5,17 @@
 from odoo import models, api, _, fields
 from odoo.exceptions import UserError
 
+class StockMove(models.Model):
+    _inherit = 'stock.move'
+
+    temperature = fields.Float(string="Temperatura refrigerado")
+
 class StockPicking(models.Model):
     _inherit = 'stock.picking'
 
-    temperature = fields.Float(string="Temperatura")
-
     def button_validate(self):
-        if self.picking_type_code == 'incoming' and (not self.temperature or self.temperature == 0):
-            raise UserError(_("No se ha establecido la temperatura"))
-        picking = super().button_validate()
+        for line in self.move_ids_without_package:
+            if line.picking_id.picking_type_id.code == 'incoming' and (not line.temperature or line.temperature == 0):
+                raise UserError(_("No se ha establecido la temperatura"))
+            picking = super().button_validate()
         return picking
