@@ -13,7 +13,7 @@ class MrpWorkcenter(models.Model):
 class MrpWorkorder(models.Model):
     _inherit = 'mrp.workorder'
 
-    temperature = fields.Float(string="Temperatura")
+    temperature = fields.Float(string="Temperatura refrigerado")
 
     def action_mark_as_done(self):
         if self.workcenter_id.need_temp and (not self.temperature or self.temperature == 0):
