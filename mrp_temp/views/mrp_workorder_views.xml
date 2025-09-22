@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+# (c) 2025 Nexta - Carlos Ros <cros@nextads.es>
+# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+-->
+<odoo>
+    <!-- Inherit Form View to Modify it -->
+    <record id="mrp_production_workorder_form_view_inherit" model="ir.ui.view">
+        <field name="name">mrp.production.work.order.form</field>
+        <field name="model">mrp.workorder</field>
+        <field name="inherit_id" ref="mrp.mrp_production_workorder_form_view_inherit"/>
+        <field name="arch" type="xml">
+            <field name="workcenter_id" position="after">
+                <field name="temperature" required="workcenter_id.need_temp"/>
+            </field>
+        </field>
+    </record>
+
+</odoo>
