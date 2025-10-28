@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_task_form2_employee" model="ir.ui.view">
+        <field name="name">project.task.form2.employee</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_form2"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='user_ids']" position='attributes'>
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='user_ids']" position='after'>
+                <field name="employee_ids" widget="many2many_tags"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="edit_project_employee" model="ir.ui.view">
+        <field name="name">edit.project.employee</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.edit_project"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='user_id']" position='attributes'>
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='user_id']" position='after'>
+                <field name="employee_id"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_project_employee" model="ir.ui.view">
+        <field name="name">view.project.employee</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.view_project"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='user_id']" position='attributes'>
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='user_id']" position='after'>
+                <field name="employee_id"/>
+            </xpath>
+        </field>
+    </record>
+
+
+
+
+</odoo>
