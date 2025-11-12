@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="valued_report_picking_nds" inherit_id="stock_picking_report_valued.valued_report_picking">
+        <!-- El th de descuento está marcado con groups="product.group_discount_per_so_line" -->
+        <xpath expr="//table[@name='stock_move_line_table']/thead//th[@groups='product.group_discount_per_so_line']"
+               position="replace">
+
+        </xpath>
+    </template>
+
+    <!-- 2) Quitar la celda "Discount" en las líneas con serie -->
+    <template id="valued_report_picking_has_serial_move_line_nds"
+              inherit_id="stock_picking_report_valued.valued_report_picking_has_serial_move_line"
+              priority="20">
+        <xpath expr=".//td[@groups='product.group_discount_per_so_line']" position="replace">
+        </xpath>
+    </template>
+</odoo>
