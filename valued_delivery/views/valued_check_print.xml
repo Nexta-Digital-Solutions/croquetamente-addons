@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+# (c) 2024 Nexta - Jaume Basiero <jbasiero@nextads.es>
+# License AGPL-3.0 or later (http://www.gnu.org/licenses/agpl).
+-->
+<odoo>
+    <!-- Inherit Form View to Modify it -->
+    <record id="stock_picking_form_valued" model="ir.ui.view">
+        <field name="name">stock.picking.form.valued</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='partner_id']" position="after">
+                <field name="valued_picking"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
