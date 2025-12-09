@@ -1,0 +1,50 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* stock_alert
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-09 16:29+0000\n"
+"PO-Revision-Date: 2025-12-09 16:29+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: stock_alert
+#: model:ir.model.fields,field_description:stock_alert.field_product_product__alert
+#: model:ir.model.fields,field_description:stock_alert.field_product_template__alert
+msgid "Alert"
+msgstr ""
+
+#. module: stock_alert
+#: model:ir.model,name:stock_alert.model_product_template
+msgid "Product"
+msgstr "Producto"
+
+#. module: stock_alert
+#: model:ir.model.fields,field_description:stock_alert.field_product_product__qty_to_alert
+#: model:ir.model.fields,field_description:stock_alert.field_product_template__qty_to_alert
+msgid "Quantity to alert"
+msgstr ""
+
+#. module: stock_alert
+#: model:ir.model,name:stock_alert.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Línea de pedido de venta"
+
+#. module: stock_alert
+#. odoo-python
+#: code:addons/stock_alert/models/sale_order_line.py:0
+msgid "There is less than the amount indicated in the alert for product {}."
+msgstr "Quedan menos de la cantidad indicada en la alerta para el producto {}."
+
+#. module: stock_alert
+#. odoo-python
+#: code:addons/stock_alert/models/sale_order_line.py:0
+msgid "Warning"
+msgstr "Aviso"
