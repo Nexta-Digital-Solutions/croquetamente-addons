@@ -1,0 +1,8 @@
+# -*- coding: utf-8 -*-
+# (c) 2025 Nexta - Carlos Ros <cros@nextads.es>
+# License AGPL-3.0 or later (http://www.gnu.org/licenses/a
+
+from . import sale_order_line
+from . import product_template
+
+
