@@ -19,7 +19,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:stock_alert.field_product_product__alert
 #: model:ir.model.fields,field_description:stock_alert.field_product_template__alert
 msgid "Alert"
-msgstr ""
+msgstr "Alerta stock"
 
 #. module: stock_alert
 #: model:ir.model,name:stock_alert.model_product_template
@@ -30,7 +30,7 @@ msgstr "Producto"
 #: model:ir.model.fields,field_description:stock_alert.field_product_product__qty_to_alert
 #: model:ir.model.fields,field_description:stock_alert.field_product_template__qty_to_alert
 msgid "Quantity to alert"
-msgstr ""
+msgstr "Cantidad para alerta"
 
 #. module: stock_alert
 #: model:ir.model,name:stock_alert.model_sale_order_line
