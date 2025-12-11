@@ -12,7 +12,7 @@ class SaleOrderLine(models.Model):
     @api.depends('product_id')
     def show_stock_quantity_alert(self):
         for line in self:
-            if line.product_id.qty_available < line.product_id.qty_to_alert:
+            if line.product_id.qty_available > line.product_id.qty_to_alert:
                 message = _("There is less than the amount indicated in the alert for product {}.").format(line.product_id.display_name)
                 return {'warning': {'title': _('Warning'), 'message': message}}
 
